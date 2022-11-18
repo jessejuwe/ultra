@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { LandingPage, Section } from '../../exports/exports';
+import { LandingPage, Section, Pricing } from '../../exports/exports';
 import {
   homeObjOne,
   homeObjTwo,
@@ -43,6 +43,7 @@ const MainPage: React.FC = () => {
       <Section {...homeObjOne} />
       <Section {...homeObjTwo} />
       <Section {...homeObjThree} />
+      <Pricing />
       <Section {...homeObjFour} />
     </main>
   );
