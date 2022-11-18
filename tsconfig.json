@@ -15,6 +15,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "layouts/Navbar/Navbar.elements.ts",
+    "styles/globalStyles.ts"
+  ],
   "exclude": ["node_modules"]
 }
