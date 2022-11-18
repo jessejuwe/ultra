@@ -7,6 +7,10 @@ export const PricingSection = styled.div`
   flex-direction: column;
   justify-content: center;
   background: #ff6836;
+
+  @media screen and (max-width: 960px) {
+    padding: 50px 0 80px;
+  }
 `;
 
 export const PricingWrapper = styled.div`
@@ -14,6 +18,7 @@ export const PricingWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+
   @media screen and (max-width: 960px) {
     margin: 0 30px;
     display: flex;
@@ -26,12 +31,17 @@ export const PricingHeading = styled.h1`
   color: #fff;
   font-size: 48px;
   margin-bottom: 24px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 export const PricingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
@@ -42,22 +52,27 @@ export const PricingContainer = styled.div`
 `;
 
 export const PricingCard = styled(Link)`
-  background: #242424;
+  background: #101522;
   box-shadow: 0 6px 20px rgba(255, 104, 54, 0.2);
   width: 280px;
   height: 500px;
   text-decoration: none;
   border-radius: 4px;
+
   &:nth-child(2) {
     margin: 24px;
   }
+
   &:hover {
     transform: scale(1.06);
     transition: all 0.3s ease-out;
     color: #1c2237;
   }
+
   @media screen and (max-width: 960px) {
     width: 90%;
+    height: 450px;
+
     &:hover {
       transform: none;
     }
@@ -75,6 +90,11 @@ export const PricingCardInfo = styled.div`
 
 export const PricingCardIcon = styled.div`
   margin: 24px 0;
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
 `;
 
 export const PricingCardPlan = styled.h3`

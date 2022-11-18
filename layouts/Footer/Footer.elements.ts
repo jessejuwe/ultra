@@ -14,7 +14,6 @@ export const FooterContainer = styled.footer`
 
   @media screen and (max-width: 768px) {
     height: 100%;
-    justify-content: start;
   }
 `;
 

@@ -20,61 +20,34 @@ import {
   PricingCardFeatures,
   PricingCardFeature,
 } from './Pricing.elements';
+import { PRICING } from '../../helpers/pricing';
 
 const Pricing: React.FC = () => {
   return (
-    <PricingSection>
+    <PricingSection id="pricing">
       <PricingWrapper>
         <PricingHeading>Our Services</PricingHeading>
         <PricingContainer>
-          <PricingCard href="/sign-up">
-            <PricingCardInfo>
-              <PricingCardIcon>
-                <DashboardFilled />
-              </PricingCardIcon>
-              <PricingCardPlan>Starter Pack</PricingCardPlan>
-              <PricingCardCost>$99.99</PricingCardCost>
-              <PricingCardLength>per month</PricingCardLength>
-              <PricingCardFeatures>
-                <PricingCardFeature>100 New Users</PricingCardFeature>
-                <PricingCardFeature>$10,000 Budget</PricingCardFeature>
-                <PricingCardFeature>Retargeting analytics</PricingCardFeature>
-              </PricingCardFeatures>
-              <Button primary>Choose Plan</Button>
-            </PricingCardInfo>
-          </PricingCard>
-          <PricingCard href="/sign-up">
-            <PricingCardInfo>
-              <PricingCardIcon>
-                <DollarCircleFilled />
-              </PricingCardIcon>
-              <PricingCardPlan>Gold Rush</PricingCardPlan>
-              <PricingCardCost>$299.99</PricingCardCost>
-              <PricingCardLength>per month</PricingCardLength>
-              <PricingCardFeatures>
-                <PricingCardFeature>1000 New Users</PricingCardFeature>
-                <PricingCardFeature>$50,000 Budget</PricingCardFeature>
-                <PricingCardFeature>Lead Gen Analytics</PricingCardFeature>
-              </PricingCardFeatures>
-              <Button primary>Choose Plan</Button>
-            </PricingCardInfo>
-          </PricingCard>
-          <PricingCard href="/sign-up">
-            <PricingCardInfo>
-              <PricingCardIcon>
-                <FireFilled />
-              </PricingCardIcon>
-              <PricingCardPlan>Diamond Kings</PricingCardPlan>
-              <PricingCardCost>$999.99</PricingCardCost>
-              <PricingCardLength>per month</PricingCardLength>
-              <PricingCardFeatures>
-                <PricingCardFeature>Unlimited Users</PricingCardFeature>
-                <PricingCardFeature>Unlimited Budget</PricingCardFeature>
-                <PricingCardFeature>24/7 Support</PricingCardFeature>
-              </PricingCardFeatures>
-              <Button primary>Choose Plan</Button>
-            </PricingCardInfo>
-          </PricingCard>
+          {PRICING.map((item, index) => (
+            <PricingCard key={index} href="/sign-up">
+              <PricingCardInfo>
+                <PricingCardIcon>
+                  <item.icon />
+                </PricingCardIcon>
+                <PricingCardPlan>{item.plan}</PricingCardPlan>
+                <PricingCardCost>{item.cost}</PricingCardCost>
+                <PricingCardLength>{item.duration}</PricingCardLength>
+                <PricingCardFeatures>
+                  {item.benefits.map((benefit, benefitIndex) => (
+                    <PricingCardFeature key={benefitIndex}>
+                      {benefit}
+                    </PricingCardFeature>
+                  ))}
+                </PricingCardFeatures>
+                <Button primary>Choose Plan</Button>
+              </PricingCardInfo>
+            </PricingCard>
+          ))}
         </PricingContainer>
       </PricingWrapper>
     </PricingSection>
