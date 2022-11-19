@@ -20,7 +20,7 @@ type Props = {
   lightBg: boolean;
   lightText: boolean;
   imgStart: boolean;
-  start: boolean;
+  start?: any;
   topline: string;
   heading: string;
   description: string;

@@ -1,12 +1,12 @@
 import Head from 'next/head';
 
-import { MainPage } from '../exports/exports';
+import { ErrorPage } from '../../exports/exports';
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Ultra</title>
+        <title>Page Not Found</title>
         <meta
           name="Ultra"
           content="A web app template for a marketing organization. Built with Next.js, TypeScript, TailwindCSS & styled-components."
@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/iconC.ico" />
       </Head>
 
-      <MainPage />
+      <ErrorPage />
     </div>
   );
 }

@@ -51,8 +51,6 @@ const Navbar: React.FC = () => {
 
       // prettier-ignore
       !entry.isIntersecting ? nav.classList.add('sticky') : nav.classList.remove('sticky');
-
-      console.log(nav.className);
     };
 
     const navHeight = nav.getBoundingClientRect().height;
@@ -64,7 +62,7 @@ const Navbar: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(obsCallback, obsOptions);
-    observer.observe(landingPage as Element);
+    observer.observe(landingPage);
 
     // displaying button based on window size
     const showButton = () => {

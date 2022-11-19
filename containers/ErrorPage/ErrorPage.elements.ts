@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styled from 'styled-components';
 
 export const Page = styled.div`
@@ -68,10 +67,18 @@ export const Subtitle = styled.p`
   }
 `;
 
-export const SignUp = styled(Link)`
+export const ActionGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-start;
+`;
+
+export const Action = styled.h3`
   color: #ff6836;
   font-size: 1.2rem;
   font-weight: 600;
+  cursor: pointer;
 
   &:hover {
     color: #ff774a;

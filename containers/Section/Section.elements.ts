@@ -8,7 +8,6 @@ export const GlobalSectionStyle = createGlobalStyle`
 
 .section {
   width: 100%;
-  border-top: 1px solid #ddd;
   transition: all 0.3s ease-in-out;
   padding-left: 0;
   padding-right: 0;
@@ -64,7 +63,7 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const ImageWrapper = styled.div<{ imgStart: boolean }>`
+export const ImageWrapper = styled.div<{ imgStart: any }>`
   max-width: 555px;
   display: flex;
   justify-content: ${({ imgStart }) => (imgStart ? 'flex-start' : 'flex-end')};
